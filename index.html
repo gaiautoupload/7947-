@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071018">
+  <meta name="description" content="7947 補丁科核心分點、推估成本、庫存與股價影響力手機戰情室">
+  <title>7947 主力雷達｜補丁科</title>
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand"><span>7947</span><b>主力雷達</b></div>
+      <div class="live"><i></i><span id="data-status">載入中</span></div>
+    </header>
+
+    <section class="quote" id="overview">
+      <div class="quote-top">
+        <div><p>興櫃 · AI 記憶體</p><h1 id="stock-name">補丁科</h1><span id="stock-id">7947</span></div>
+        <div class="price"><strong id="close">—</strong><span id="change">—</span></div>
+      </div>
+      <div class="timestamp" id="timestamp">讀取每日快照…</div>
+      <div class="pulse">
+        <div class="gauge" id="gauge"><span id="signal-score">—</span></div>
+        <div><small>策略溫度</small><h2 id="signal-label">資料載入中</h2><p id="signal-copy">正在核對行情與分點資料。</p></div>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <article><span id="visible-net-label">核心累積淨額</span><strong id="visible-net">—</strong><small>已載入分點合計</small></article>
+      <article><span>成交量</span><strong id="volume">—</strong><small>當日市場</small></article>
+      <article><span>籌碼集中</span><strong id="concentration">—</strong><small id="concentration-pct">—</small></article>
+    </section>
+
+    <section class="section" id="brokers">
+      <div class="section-head"><div><p>CORE BROKER FLOW</p><h2>疑似核心主力 20</h2></div><span id="period-meta">歷史行為評分</span></div>
+      <div class="period-tabs" aria-label="買賣超期間">
+        <button class="active" data-period="core">核心</button>
+        <button data-period="1">每日</button>
+        <button data-period="5">近 5 日</button>
+        <button data-period="10">近 10 日</button>
+        <button data-period="20">近 20 日</button>
+      </div>
+      <div class="segmented" id="flow-side-tabs">
+        <button class="active-buy" data-side="buy">買超 <b id="buy-count">0</b></button>
+        <button data-side="sell">賣超 <b id="sell-count">0</b></button>
+      </div>
+      <div class="broker-list" id="broker-list"></div>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="section-head"><div><p>PRICE IMPACT</p><h2>誰最能帶動股價？</h2></div><span>60 日滾動</span></div>
+      <div id="impact-list"></div>
+    </section>
+
+    <section class="section" id="strategy">
+      <div class="section-head"><div><p>PLAYBOOK</p><h2>跟隨策略</h2></div><span>只做確認，不猜主力</span></div>
+      <div class="rules">
+        <article><i>1</i><div><b>首週建檔</b><p>掛牌未滿 5 個有效交易日只建立分點成本與庫存，不用首日高波動追價。</p></div></article>
+        <article><i>2</i><div><b>籌碼確認</b><p>樣本成熟後，前 5 高影響分點至少 3 家同步買超，且股價站上群體估算成本才轉多。</p></div></article>
+        <article><i>3</i><div><b>價量防守</b><p>高價興櫃股以群體成本為防守線；庫存仍在高峰 70% 以上時，單日震盪不直接視為出場。</p></div></article>
+        <article><i>4</i><div><b>專案降溫</b><p>AI 記憶體題材不取代籌碼驗證；持有滿 5 日後，庫存跌破高峰 30% 且同步賣超才退出。</p></div></article>
+      </div>
+      <p class="disclaimer" id="method-note"></p>
+    </section>
+
+    <nav class="bottom-nav" aria-label="戰情室導覽">
+      <a href="#overview"><i>◉</i><span>總覽</span></a><a href="#brokers"><i>↕</i><span>主力</span></a><a href="#impact"><i>⌁</i><span>影響力</span></a><a href="#strategy"><i>✓</i><span>策略</span></a>
+    </nav>
+  </main>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
+
