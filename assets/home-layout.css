@@ -1,0 +1,33 @@
+.stock-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 225px;
+}
+
+.stock-card h2 {
+  margin: 36px 0 8px;
+}
+
+.stock-card p {
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.stock-card strong {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: auto;
+  line-height: 1.4;
+}
+
+@media (max-width: 620px) {
+  .stock-card {
+    min-height: 190px;
+  }
+
+  .stock-card h2 {
+    margin-top: 28px;
+  }
+}
