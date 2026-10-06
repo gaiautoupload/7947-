@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071018">
+  <meta name="description" content="7951 大易橙核心分點、成本、庫存與股價影響力戰情室"><title>7951 主力雷達｜大易橙</title>
+  <link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="brand"><span>7951</span><b>主力雷達</b></div><a href="../../" style="margin-left:auto;color:#8da5b4;text-decoration:none;font-size:13px;border:1px solid #1c3444;border-radius:999px;padding:7px 10px">全部個股</a>
+      <div class="live"><i></i><span id="data-status">載入中</span></div>
+    </header>
+
+    <section class="quote" id="overview">
+      <div class="quote-top">
+        <div><p>興櫃 · 其他電子</p><h1 id="stock-name">大易橙</h1><span id="stock-id">7951</span></div>
+        <div class="price"><strong id="close">—</strong><span id="change">—</span></div>
+      </div>
+      <div class="timestamp" id="timestamp">讀取每日快照…</div>
+      <div class="pulse">
+        <div class="gauge" id="gauge"><span id="signal-score">—</span></div>
+        <div><small>策略溫度</small><h2 id="signal-label">資料載入中</h2><p id="signal-copy">正在核對行情與分點資料。</p></div>
+      </div>
+    </section>
+
+    <section class="metrics">
+      <article><span id="visible-net-label">核心累積淨額</span><strong id="visible-net">—</strong><small>已載入分點合計</small></article>
+      <article><span>成交量</span><strong id="volume">—</strong><small>當日市場</small></article>
+      <article><span>籌碼集中</span><strong id="concentration">—</strong><small id="concentration-pct">—</small></article>
+    </section>
+
+    <section class="section" id="brokers">
+      <div class="section-head"><div><p>CORE BROKER FLOW</p><h2>疑似核心主力 20</h2></div><span id="period-meta">歷史行為評分</span></div>
+      <div class="period-tabs" aria-label="買賣超期間">
+        <button class="active" data-period="core">核心</button>
+        <button data-period="1">每日</button>
+        <button data-period="5">近 5 日</button>
+        <button data-period="10">近 10 日</button>
+        <button data-period="20">近 20 日</button>
+      </div>
+      <div class="segmented" id="flow-side-tabs">
+        <button class="active-buy" data-side="buy">買超 <b id="buy-count">0</b></button>
+        <button data-side="sell">賣超 <b id="sell-count">0</b></button>
+      </div>
+      <div class="broker-list" id="broker-list"></div>
+    </section>
+
+    <section class="section" id="impact">
+      <div class="section-head"><div><p>PRICE IMPACT</p><h2>誰最能帶動股價？</h2></div><span>60 日滾動</span></div>
+      <div id="impact-list"></div>
+    </section>
+
+    <section class="section" id="strategy">
+      <div class="section-head"><div><p>PLAYBOOK</p><h2>跟隨策略</h2></div><span>只做確認，不猜主力</span></div>
+      <div class="rules">
+        <article><i>1</i><div><b>首週建檔</b><p>前 5 個有效交易日只建立成本、庫存與集中度，不用首日價量追價。</p></div></article>
+        <article><i>2</i><div><b>籌碼確認</b><p>樣本成熟後，前 5 高影響分點至少 3 家同步買超，且股價站上群體估算成本才轉多。</p></div></article>
+        <article><i>3</i><div><b>廠務工程確認</b><p>半導體廠務與二次配電題材不取代分點證據；價格守住群體成本且庫存續增才持有。</p></div></article>
+        <article><i>4</i><div><b>降溫</b><p>庫存跌破高峰 30%、主要分點同步賣超時退出，不為首週波動加碼。</p></div></article>
+      </div>
+      <p class="disclaimer" id="method-note"></p>
+    </section>
+
+    <nav class="bottom-nav" aria-label="戰情室導覽" style="grid-template-columns:repeat(5,minmax(0,1fr))!important">
+      <a href="../../" aria-label="返回個股追蹤首頁"><i>⌂</i><span>首頁</span></a><a href="#overview"><i>◉</i><span>總覽</span></a><a href="#brokers"><i>↕</i><span>主力</span></a><a href="#impact"><i>⌁</i><span>影響力</span></a><a href="#strategy"><i>✓</i><span>策略</span></a>
+    </nav>
+  </main>
+  <script src="./assets/app.js" defer></script>
+</body>
+</html>
+

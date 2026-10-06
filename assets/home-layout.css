@@ -4,6 +4,14 @@
   min-height: 225px;
 }
 
+.stock-card.semiconductor {
+  --accent: #ff9e7a;
+}
+
+.stock-card.medical {
+  --accent: #58e0cf;
+}
+
 .stock-card h2 {
   margin: 36px 0 8px;
 }
