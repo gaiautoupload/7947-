@@ -1,5 +1,7 @@
 # 個股主力雷達
 
+首頁依新增追蹤批次由新到舊排列；之後新增個股卡片必須放在清單最上方，同批次保持固定順序。
+
 每日分點榜已於 2026-10-08 改為全市場當日有交易的全部分點；核心與多日追蹤保留原有策略範圍。維護規則見 [DAILY_RANKING.md](DAILY_RANKING.md)。
 
 Static GitHub Pages dashboard for Taiwan emerging-market stocks 7947, 7949, 7950, 6610, 7951, 6660, 7955, 7956 and 8244. Each stock page reads its own `stocks/<stock_id>/data/snapshot.json` and requires no backend or database.
